@@ -1,0 +1,9 @@
+.saveable{
+    font-style: italic;
+}
+.modified{
+    font-weight: bold;
+}
+.special{
+    font-size: 24px;
+}
