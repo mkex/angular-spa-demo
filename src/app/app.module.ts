@@ -17,6 +17,14 @@ import { DirectiveBuiltinComponent } from './directive/directive-builtin/directi
 import { DirectiveCustomComponent } from './directive/directive-custom/directive-custom.component';
 import { HighlightDirective } from './directive/directive-custom/custom-directive/highlight.directive';
 import { UnlessDirective } from './directive/directive-custom/custom-directive/unless.directive';
+import { ServiceComponent } from './service/service.component';
+import { LogService } from './service/log.service';
+import { PipeBuiltinComponent } from './pipe/pipe-builtin/pipe-builtin.component';
+import { PipeCustomComponent } from './pipe/pipe-custom/pipe-custom.component';
+import { ExponentialStrengthPipe } from './pipe/pipe-custom/exponential-strength.pipe';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +40,21 @@ import { UnlessDirective } from './directive/directive-custom/custom-directive/u
     DirectiveBuiltinComponent,
     DirectiveCustomComponent,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    ServiceComponent,
+    PipeBuiltinComponent,
+    PipeCustomComponent,
+    ExponentialStrengthPipe,
+    HttpComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

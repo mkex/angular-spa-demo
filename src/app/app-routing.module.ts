@@ -6,6 +6,11 @@ import { ViewchildRefComponent } from './child-reference/viewchild-ref/viewchild
 import { ContentchildRefComponent } from './child-reference/contentchild-ref/contentchild-ref.component';
 import { DirectiveBuiltinComponent } from './directive/directive-builtin/directive-builtin.component';
 import { DirectiveCustomComponent } from './directive/directive-custom/directive-custom.component';
+import { ServiceComponent } from './service/service.component';
+import { PipeBuiltinComponent } from './pipe/pipe-builtin/pipe-builtin.component';
+import { PipeCustomComponent } from './pipe/pipe-custom/pipe-custom.component';
+import { HttpComponent } from './http/http.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 const routes: Routes = [
   { path: 'databinding', component: DataBindingComponent },
@@ -13,7 +18,16 @@ const routes: Routes = [
   { path: 'viewchildref', component: ViewchildRefComponent },
   { path: 'contentchildref', component: ContentchildRefComponent },
   { path: 'directivebuiltin', component: DirectiveBuiltinComponent },
-  { path: 'directivecustom', component: DirectiveCustomComponent }
+  { path: 'directivecustom', component: DirectiveCustomComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'pipebuiltin', component: PipeBuiltinComponent },
+  { path: 'pipecustom', component: PipeCustomComponent },
+  { path: 'http', component: HttpComponent },
+  { path: 'lifecycle', component: LifecycleComponent },
+
+  { path: 'navigation/:id/:name', loadChildren: './navigation/navigation.module#NavigationModule' },
+
+  { path: '**', component: DataBindingComponent }
 ];
 
 @NgModule({
@@ -21,3 +35,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
