@@ -1,26 +1,28 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-</div>
 
 <!-- Routing Link -->
-<h4><a routerLink="databinding" [routerLinkActive]="['active']">Data Binding</a></h4>
-<h4><a routerLink="templateref" [routerLinkActive]="['active']">Template Ref</a></h4>
-<h4><a routerLink="viewchildref" [routerLinkActive]="['active']">ViewChild Ref</a></h4>
-<h4><a routerLink="contentchildref" [routerLinkActive]="['active']">ContentChild Ref</a></h4>
-<h4><a routerLink="directivebuiltin" [routerLinkActive]="['active']">Built-in Directive</a></h4>
-<h4><a routerLink="directivecustom" [routerLinkActive]="['active']">Custom Directive</a></h4>
-<h4><a routerLink="pipebuiltin" [routerLinkActive]="['active']">Built-in Pipe</a></h4>
-<h4><a routerLink="pipecustom" [routerLinkActive]="['active']">Custom Pipe</a></h4>
-<h4><a routerLink="service" [routerLinkActive]="['active']">Serivce & DI</a></h4>
-<h4><a routerLink="http" [routerLinkActive]="['active']">HTTP</a></h4>
-<h4><a routerLink="lifecycle" [routerLinkActive]="['active']">Lifecycle</a></h4>
+<ul>
+  <li><a routerLink="databinding" [routerLinkActive]="['active']">Data Binding</a></li>
+  <li><a routerLink="templateref" [routerLinkActive]="['active']">Template Ref</a></li>
+  <li><a routerLink="viewchildref" [routerLinkActive]="['active']">ViewChild Ref</a></li>
+  <li><a routerLink="contentchildref" [routerLinkActive]="['active']">ContentChild Ref</a></li>
+  <li><a routerLink="directivebuiltin" [routerLinkActive]="['active']">Built-in Directive</a></li>
+  <li><a routerLink="directivecustom" [routerLinkActive]="['active']">Custom Directive</a></li>
+  <li><a routerLink="pipebuiltin" [routerLinkActive]="['active']">Built-in Pipe</a></li>
+  <li><a routerLink="pipecustom" [routerLinkActive]="['active']">Custom Pipe</a></li>
+  <li><a routerLink="service" [routerLinkActive]="['active']">Serivce & DI</a></li>
+  <li><a routerLink="http" [routerLinkActive]="['active']">HTTP</a></li>
+  <li><a routerLink="lifecycle" [routerLinkActive]="['active']">Lifecycle</a></li>
 
-<h4><a [routerLink]="['navigation', 'myID', 'myName']" 
-       [queryParams]="{pageNo: '1'}" fragment="loading"
-       [routerLinkActive]="['active']">Routing & Navigation</a></h4>
+  <li><a [routerLink]="['navigation', 'myID', 'myName']" 
+        [queryParams]="{pageNo: '1'}" fragment="loading"
+        [routerLinkActive]="['active']">Routing & Navigation</a></li>
 
-<!-- Routing 되는 뷰의 위치 -->
-<router-outlet></router-outlet>
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+  <!-- Routing 되는 뷰의 위치 -->
+  <router-outlet></router-outlet>
+</div>
+
+
 
