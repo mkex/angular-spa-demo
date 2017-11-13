@@ -1,0 +1,53 @@
+<h1>Forms</h1>
+
+<div>
+  <h1>Book Form:</h1>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Name</label>
+      <input type="text" id="name" required minlength="3" maxlength="10" 
+          [(ngModel)]="user.name" name="name" #name="ngModel">
+      <div *ngIf="name.errors && (name.dirty || name.touched)">
+        <div [hidden]="!name.errors.required">
+          Name is required!
+        </div>
+        <div [hidden]="!name.errors.minlength">
+          Name must be at least 3 characters long.
+        </div>
+        <div [hidden]="!name.errors.maxlength">
+          Name cannot be more than 10 characters long.
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>Author</label>
+      <input type="text" id="age" 
+          required [(ngModel)]="user.age" name="user.age" #age="ngModel">
+      <div *ngIf="age.errors && (age.dirty || age.touched)">
+        <div [hidden]="!age.errors.required">
+          Age is required!
+        </div>
+      </div>
+    </div>
+    <div>
+      <label>E-Mail</label>
+      <input type="text" id="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+          [(ngModel)]="user.email" name="email" #email="ngModel">
+      <div *ngIf="email.errors && (email.dirty || email.touched)">
+        <div [hidden]="!email.errors.required">
+          Email is required!
+        </div>
+        <div [hidden]="!email.errors.pattern">
+          Must be a valid Email!
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="submit" [disabled]="!userForm.form.valid">Submit</button>
+    </div>
+  </form>
+  <div>
+    <h4>Model:</h4>
+    {{ user | json }}
+  </div>
+</div>

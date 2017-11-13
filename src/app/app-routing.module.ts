@@ -11,6 +11,7 @@ import { PipeBuiltinComponent } from './pipe/pipe-builtin/pipe-builtin.component
 import { PipeCustomComponent } from './pipe/pipe-custom/pipe-custom.component';
 import { HttpComponent } from './http/http.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
   { path: 'databinding', component: DataBindingComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'pipecustom', component: PipeCustomComponent },
   { path: 'http', component: HttpComponent },
   { path: 'lifecycle', component: LifecycleComponent },
+  { path: 'forms', component: FormsComponent },
 
   { path: 'navigation/:id/:name', loadChildren: './navigation/navigation.module#NavigationModule' },
 

@@ -25,6 +25,7 @@ import { ExponentialStrengthPipe } from './pipe/pipe-custom/exponential-strength
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     PipeCustomComponent,
     ExponentialStrengthPipe,
     HttpComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
