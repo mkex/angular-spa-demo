@@ -1,0 +1,10 @@
+<p><b>State-Child1 component</b></p>
+
+<p>Data: {{ data | json }}</p>
+
+<p>
+  id: <input type="text" #id (input)="0" value="new id" size="10">
+  value: <input type="text" #value (input)="0" value="new value"  size="10">
+  <button (click)="onUpdateData(id.value, value.value)">Update Data</button>
+</p>
+

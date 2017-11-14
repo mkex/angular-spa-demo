@@ -26,6 +26,10 @@ import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { FormsComponent } from './forms/forms.component';
+import { GlobalStateComponent } from './global-state/global-state.component';
+import { StateChild1Component } from './global-state/state-child1/state-child1.component';
+import { StateChild2Component } from './global-state/state-child2/state-child2.component';
+import { DataService } from './global-state/service/data.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,10 @@ import { FormsComponent } from './forms/forms.component';
     ExponentialStrengthPipe,
     HttpComponent,
     LifecycleComponent,
-    FormsComponent
+    FormsComponent,
+    GlobalStateComponent,
+    StateChild1Component,
+    StateChild2Component
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,7 @@ import { FormsComponent } from './forms/forms.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LogService],
+  providers: [LogService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

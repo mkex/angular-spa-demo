@@ -12,6 +12,7 @@ import { PipeCustomComponent } from './pipe/pipe-custom/pipe-custom.component';
 import { HttpComponent } from './http/http.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { FormsComponent } from './forms/forms.component';
+import { GlobalStateComponent } from './global-state/global-state.component';
 
 const routes: Routes = [
   { path: 'databinding', component: DataBindingComponent },
@@ -28,6 +29,8 @@ const routes: Routes = [
   { path: 'forms', component: FormsComponent },
 
   { path: 'navigation/:id/:name', loadChildren: './navigation/navigation.module#NavigationModule' },
+
+  { path: 'globalstate', component: GlobalStateComponent },
 
   { path: '**', component: DataBindingComponent }
 ];
