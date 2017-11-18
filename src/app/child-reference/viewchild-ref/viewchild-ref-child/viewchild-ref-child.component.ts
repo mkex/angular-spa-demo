@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ViewchildRefChildComponent {
   
-  childProperty: string = 'My name is ViewchildRefChildComponent'
+  childProperty: string = 'hi~~~';
 
   childMethod(data:string){
     this.childProperty = data;

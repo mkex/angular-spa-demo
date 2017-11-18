@@ -1,6 +1,5 @@
 <!-- String Interpolation -->
 <h1>{{title}}</h1>
-
 <hr>
 
 <!-- Property Binding -->
@@ -19,11 +18,14 @@
     <span>{{inputData}}</span>
 </div>
 
+
+
+
 <hr>
 
 <!-- 자식 컴포넌트 추가 -->
 <asd-data-binding-child 
     [title]="childTitle" 
-    [name]="'박종명'" 
+    name="박종명" 
     (childEventEmmitter)="onParentEventHandler($event)">
 </asd-data-binding-child>

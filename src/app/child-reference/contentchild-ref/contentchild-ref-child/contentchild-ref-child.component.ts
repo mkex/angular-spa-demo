@@ -8,9 +8,11 @@ import { ContentchildRefContentchildComponent } from '../contentchild-ref-conten
 })
 export class ContentchildRefChildComponent implements AfterContentInit {
 
+  //** ContentChild 참조(타입으로 참조) */
   @ContentChild(ContentchildRefContentchildComponent) 
       contentChildComponent: ContentchildRefContentchildComponent;
       
+  //** ContentChild 참조(로컬참조변수로 참조) */
   @ContentChild('myInputBox') inputBox: ElementRef;
 
   ngAfterContentInit() {
@@ -18,8 +20,10 @@ export class ContentchildRefChildComponent implements AfterContentInit {
   }
 
   onClick(){
+    // ContentChild 컴포넌트 메서드 호출(값 전달)
     this.contentChildComponent.sendDataToChild('Pass data to ContentChild');
 
+    // ContentChild 요소의 값 액세스
     console.log(this.inputBox.nativeElement.value);
   }
 

@@ -1,0 +1,11 @@
+<h1>Playground</h1>
+
+<p>부모 컴포넌트 속성 값: {{ parentValue }}</p>
+
+<hr>
+
+<asd-playground-child [value]="parentValue" (valueChange)="parentValue=$event"></asd-playground-child>
+
+<hr>
+
+<asd-playground-child [(value)]="parentValue"></asd-playground-child>

@@ -4,8 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "http": "node ./server/server-mock.js | ng serve --proxy-config proxy.conf.json",
+    "start": "node ./server/server-mock.js | ng serve --open --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

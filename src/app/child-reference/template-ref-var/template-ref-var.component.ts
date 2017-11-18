@@ -6,14 +6,14 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./template-ref-var.component.css']
 })
 export class TemplateRefVarComponent {
-  
+
   onCall1(phoneNumber: string){
     console.log(phoneNumber);
   }
 
+  /** ViewChild로 템플릿 참조 */
   @ViewChild('phone') myPhone: ElementRef;
-
-  onCall2(phoneNumber: string){
+  onCall2(){
     console.log(this.myPhone.nativeElement.value);
   }
 

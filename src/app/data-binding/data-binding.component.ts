@@ -6,23 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent {
-  // Properties
-  title: string = 'Data Binding Demo';
 
-  isActive: boolean = false;
-
+  //** 컴포넌트 속성 정의(프로퍼티) */
+  title: string = 'Data Binding';
+  isActive: boolean = true;
   inputData: string ="some typing...";
 
-  // Event Handler
+  //** 이벤트 처리 함수(Event Handler) 정의 */ 
   onInput(event: Event){
     console.log((<HTMLInputElement>event.target).value);
   }
 
-  // 자식 컴포넌트와 상호작용
+
+
+
+
+
+
+  //** 자식 컴포넌트와 상호작용 */
   childTitle: string = 'Child Component';
   
   onParentEventHandler(data: string){
-    console.log(data)
     this.childTitle = data;
   }
   

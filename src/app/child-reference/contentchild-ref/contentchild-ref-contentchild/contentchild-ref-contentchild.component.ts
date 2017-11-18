@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ContentchildRefContentchildComponent {
 
-  childProperty:string = 'ContentChild Value';
+  childProperty: string = 'ContentChild Value';
   
   sendDataToChild(value:string){
     this.childProperty = value;

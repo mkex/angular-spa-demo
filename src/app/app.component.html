@@ -1,6 +1,7 @@
 
 <!-- Routing Link -->
 <ul>
+  <li><a routerLink="home" [routerLinkActive]="['active']">Home</a></li>
   <li><a routerLink="databinding" [routerLinkActive]="['active']">Data Binding</a></li>
   <li><a routerLink="templateref" [routerLinkActive]="['active']">Template Ref</a></li>
   <li><a routerLink="viewchildref" [routerLinkActive]="['active']">ViewChild Ref</a></li>
@@ -13,13 +14,11 @@
   <li><a routerLink="service" [routerLinkActive]="['active']">Serivce & DI</a></li>
   <li><a routerLink="http" [routerLinkActive]="['active']">HTTP</a></li>
   <li><a routerLink="forms" [routerLinkActive]="['active']">Forms</a></li>
-
   <li><a [routerLink]="['navigation', 'myID', 'myName']" 
         [queryParams]="{pageNo: '1'}" fragment="loading"
         [routerLinkActive]="['active']">Routing & Navigation</a></li>
-
   <li><a routerLink="globalstate" [routerLinkActive]="['active']">Global State</a></li>
-
+  <li><a routerLink="playground" [routerLinkActive]="['active']">Playground</a></li>
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">

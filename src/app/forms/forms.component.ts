@@ -5,17 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css']
 })
-export class FormsComponent implements OnInit {
+export class FormsComponent {
 
   user = { name: '', age: '', email: '' }
 
   onSubmit(){
     console.log(this.user);
-  }
-
-  constructor() { }
-
-  ngOnInit() {
   }
 
 }

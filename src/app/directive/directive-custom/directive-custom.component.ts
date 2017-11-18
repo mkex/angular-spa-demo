@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class DirectiveCustomComponent {
 
-  color:string = 'green';
-  condition:boolean = false;
+  color: string = 'green';
+
+  condition: boolean = false;
 
 }

@@ -13,8 +13,11 @@ import { HttpComponent } from './http/http.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { FormsComponent } from './forms/forms.component';
 import { GlobalStateComponent } from './global-state/global-state.component';
+import { PlaygroundComponent } from './playground/playground.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'databinding', component: DataBindingComponent },
   { path: 'templateref', component: TemplateRefVarComponent },
   { path: 'viewchildref', component: ViewchildRefComponent },
@@ -32,7 +35,9 @@ const routes: Routes = [
 
   { path: 'globalstate', component: GlobalStateComponent },
 
-  { path: '**', component: DataBindingComponent }
+  { path: 'playground', component: PlaygroundComponent },
+
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

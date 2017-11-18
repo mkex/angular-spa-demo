@@ -30,6 +30,9 @@ import { GlobalStateComponent } from './global-state/global-state.component';
 import { StateChild1Component } from './global-state/state-child1/state-child1.component';
 import { StateChild2Component } from './global-state/state-child2/state-child2.component';
 import { DataService } from './global-state/service/data.service';
+import { PlaygroundComponent } from './playground/playground.component';
+import { PlaygroundChildComponent } from './playground/playground-child/playground-child.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { DataService } from './global-state/service/data.service';
     FormsComponent,
     GlobalStateComponent,
     StateChild1Component,
-    StateChild2Component
+    StateChild2Component,
+    PlaygroundComponent,
+    PlaygroundChildComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
